@@ -83,7 +83,7 @@ function InstagramStream (server, opts) {
 
     var chain = connect();
 
-    chain.use(bodyParser.urlencoded());
+    chain.use(bodyParser.urlencoded({extended: true}));
     chain.use(bodyParser.json());
 
     chain.use(function (req, resp, next) {
